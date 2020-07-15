@@ -24,8 +24,6 @@ class ViewController: UIViewController {
         tipControl.selectedSegmentIndex = tipDefault
         tipControl.setEnabled(true, forSegmentAt: tipDefault)
         
-        print(tipDefault)
-        
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
         tipLabel.text = formatter.string(for: 0)
@@ -53,12 +51,24 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         let defaults = UserDefaults.standard
         let tipDefault = defaults.integer(forKey: "myTipIndex")
         tipControl.selectedSegmentIndex = tipDefault
         tipControl.setEnabled(true, forSegmentAt: tipDefault)
         
-        print(tipDefault)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
 }
 
