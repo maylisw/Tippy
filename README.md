@@ -22,6 +22,8 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 - [x] Added an app icon
+- [x] Added themes (Light/Dark)
+- [ ] Slider for the number of people splitting the bill
 
 ## Video Walkthrough 
 
